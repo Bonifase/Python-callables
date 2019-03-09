@@ -48,8 +48,8 @@ class Robber:
 
 
 
-you = Robber("Victoria")
-me = Robber("Bonny")
+you = Robber("Vic")
+me = Robber("B")
 print(me.health)
 
 you.attack(me)
