@@ -44,7 +44,13 @@ class Robber:
         self.damage = 10
 
     def attack(self, victim):
-        return victim.health =- self.damage 
+        victim.health = victim.health - self.damage 
 
 
 
+you = Robber("Victoria")
+me = Robber("Bonny")
+print(me.health)
+
+you.attack(me)
+print(me.health)
