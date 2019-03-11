@@ -18,23 +18,20 @@ def outside():
 outside()
 
 def prime(n):
-    count = 0
-    print("incoming a->", n)
-    if n > 1:
-        for i in range(1,n+1):
-            print("This is nice", i)
-            if n % i == 1:
-                count = count + 1        
-        if count == 2:
-            return True
-        else:
-            return False
+    even = []
+    prime = []
+    print("incoming list a->", n)
+    if len(n) > 1:
+        for i in n:
+            if i % 2 == 1:
+                prime.append(i)      
+            else:
+                even.append(i)
+    print(
+        "This list has {} prime numbers and {} even numbers".format(
+            len(prime), len(even)))
 
-def find_prime(numbers):
-    prime_list = list(filter(prime, numbers))
-    print("This the list has {} prime numbers".format(sum(prime_list)))
-
-find_prime([22,25,4,6])
+prime([22, 24, 8, 10])
 
 
 class Robber:
