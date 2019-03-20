@@ -16,8 +16,8 @@ def timer(func):
 @timer
 def waste_some_time(num_times):
     for _ in range(num_times):
-        sum([i**2 for i in range(10000)])
-        # print(">>>>>>", i)
+        more = sum([i**2 for i in range(10000)])
+        print(">>>>>>", more)
 
-num_times = 5
+num_times = 1000
 waste_some_time(num_times)
