@@ -14,14 +14,16 @@ def debug(func):
     return wrapper_debug
 
 @debug
-def details(*args, **kwargs):
-    print(args, kwargs)
+def make_greeting(name, age=None):
+    if age is None:
+        return f"Howdy {name}!"
+    else:
+        return f"Whoa {name}! {age} already, you are growing up!"
 
-scores = [3,4,5,6,8]
-user = {
-    'name': 'Bonifase',
-    'role': 'Develober',
-    'company': 'Andela'
-}
+name = 'Bonifase'
+details = dict(name='Bonifase',
+    role='Develober',
+    company='Andela')
+   
 
-details(scores, details)
+make_greeting(name, age=116)
